@@ -1,0 +1,318 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Funnel Sans";
+}
+html,body{
+    height: 100%;
+    width: 100%;
+}
+.cursor{
+    transition: background-image ease-in 0.5s;
+        height: 15px;
+        width: 15px;
+        background-color: aquamarine;
+        border-radius: 50%;
+        position: fixed;
+        z-index: 8;
+        display: none;
+        mix-blend-mode: difference;
+        background-position: center;
+        background-size: cover;
+        pointer-events: none;
+        transform: translate(-50%, -50%);
+        transition: width 0.3s ease, height 0.3s ease, border-radius 0.3s ease, background-image 0.3s ease;
+    }
+.listItem h4 a{
+    text-decoration: none;
+    color: white;
+
+}
+.main{
+    background-color: #0E0A0B;
+    font-family: "Funnel Sans";
+    cursor: none;
+}
+.page1{
+    position: relative;
+    z-index: 9;
+    min-height: 100vh;
+    width: 100%;
+    color: white;
+}
+.nav{
+    color: white;
+    padding: 1vw 3vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    position: fixed;
+    mix-blend-mode: difference;
+    z-index: 99;
+}
+.nav .logo{
+    letter-spacing: -4px;
+    font-size: 30px;
+}
+
+.nav .listItem{
+      display: flex;
+      align-items: center;
+      gap: 0.8vw;
+}
+.nav h4{
+    font-size: 1.2vw;
+    font-weight: 300;
+    cursor: pointer;
+}
+.nav h4:nth-child(1){
+    border-bottom: 1px solid white;
+}
+.logo2 i{
+    background-color: white;
+    border-radius: 50%;
+}
+/* nav part done */
+
+.page1>h1{
+    
+    padding: 0.5vw 5vw;
+    padding-top: 7vw;
+    font-size: 6vw;
+    font-weight: 400;
+}
+.page1>h1>span{
+    color:aquamarine
+}
+.page1>h2{
+    margin-top: -3vw;
+    padding: 0vw 5vw;
+    display: flex;
+    justify-content: end;
+    font-size: 8vw;
+    font-weight: 400;
+}
+.page1 video{
+    width: 50%;
+    margin-top: 10vw;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%,0);
+}
+.page2{
+    padding: 3vw 5vw;
+    color: black;
+    min-height: 100vh;
+    border-bottom:2px solid rgb(121, 121, 121);
+}
+.page2 h1{
+    letter-spacing: -0.3vw;
+    font-size: 8vw;
+    font-weight: 500;
+}
+.page2-section{
+    padding: 8vw 0vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.page2-section .left{
+    width: 50%;
+}
+.left h3{
+    width: 100%;
+    font-size: 5vw;
+    font-weight: 400;
+    line-height: 4vw;
+}
+.left i{
+    font-size: 10px;
+}
+.page2-section .right{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 40%;
+
+}
+.page2-section .right h4{
+    width: 100%;
+    text-align: end;
+    font-size: 1.8vw;
+    font-weight: 300;
+}
+.right button{
+    margin-top: 2vw;
+    cursor: pointer;
+    padding: 0.5vw 1vw;
+    width: 100%;
+    border: none;
+    border-radius: 20px;
+    font-size: 16px;
+    background-color: #EBC4FA;
+}
+
+.page3{
+    min-height: 100vw;
+    width: 100%;
+    padding: 3vw 5vw;
+    position: relative;
+    padding-bottom: 120px;
+    border-bottom: 2px solid black;
+} 
+.page3 h1{
+    font-size: 8vw;
+    font-weight: 400;
+}
+.page3-section1{
+    padding: 5vw 0vw;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+.page3-section1 video{
+    margin-top: 80px;
+}
+.page3-section1 img{
+    margin-top: -120px;
+}
+.page3-section2{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    
+}
+.page3-section2 video{
+    margin-top: -50px;
+}
+.page4{
+
+    min-height: 90vh;
+    padding: 15vw;
+    border-bottom: 2px solid white;
+}
+.elem{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    transition: all ease-out 0.5s;
+}
+.text-div{
+    height: 140px;
+    overflow: hidden;
+}
+.elem img{
+    position: absolute;
+    opacity: 0;
+    transition: all ease-out 0.5s;
+}
+.elem img:nth-child(1){
+   left: 0;
+ 
+}
+.elem img:nth-child(3){
+   right: 0;
+  
+}
+.elem h1{
+    color: white;
+    margin-top: -15px;
+    font-size: 8vw;
+    transition: all ease-out 0.5s;
+}
+
+.elem:hover h1{
+    transform:translateY(-100%);
+    color: #EBC4FA;
+}
+.elem:hover img{
+    opacity: 1;
+    transform: translateY(-20%) rotate(2deg);
+}
+.page5{
+    min-height: 150vh;
+    color: white;
+    padding: 5vw 3vw;
+}
+.page5 .heading h1{
+    font-size: 5vw;
+    font-weight: 400;
+}
+.heading span{
+    color: #EBC4FA;
+}
+.heading{
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   margin-bottom: 20px;
+}
+.box{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 2px solid white;
+    padding: 2vw 0vw;
+    opacity: 0.5;
+}
+.box h2{
+    font-weight: 300;
+}
+.box:nth-last-child(1){
+    border-bottom: 5px solid white;
+}
+.footer{
+    min-height: 50vw;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.left{
+    width: 50%;
+}
+.left p{
+    
+   
+    font-size: 25px;
+    opacity: 0.8;
+    font-weight: 400;
+}
+.logo h1{
+    font-size: 7vw;
+    letter-spacing: -10px;
+}
+.left .phone h3{
+    font-size: 20px;
+}
+.email{
+    margin-top: -25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+.email h3{
+    font-size: 20px;
+}
+.right{
+    width: 50%;
+    display: flex;
+    
+    justify-content: space-between;
+}
+.right h3{
+    opacity: 0.7;
+    font-size: 20px;
+    font-weight: 400;
+}
+.list h4{
+    margin-top: 10px;
+    font-size: 20px;
+    font-weight: 400;
+}
